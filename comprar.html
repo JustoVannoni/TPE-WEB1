@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="Logo">
+            <img class="img-fluid" src="img/logo.png" alt="Dip'ueb Connection" width="1000" height="250">    
+            <h1 class="Titulo">Comprar</h1> 
+        </div>
+            <header class="navegacion">
+                <div><input class="buton_menu" type="button" value="menu"></div>
+                <nav class="BarraNavegacion" >            
+                    <ul class="menu">    
+                        <li><a href="index.html">Inicio</a></li>                                                
+                        <li><a href="#">Servicios</a>
+                            <ul class="submenu">                    
+                                <li><a href="productos.html">Productos</a></li>
+                                <li><a href="Comprar.html">Proceder con la Compra</a></li>
+                            </ul>
+                        </li>
+                    </ul>    
+                </nav>
+            </header>   
+    <div class="DivFormulario">
+        <form class="Formulario">
+            <div id="completar_campos"></div>
+            <input required   type="text" id="nombre_produ"  placeholder="Nombre Del Producto" /> <br>                      
+            <input required  type="text" id="modelo_produ" placeholder="Modelo del Producto" /> <br>               
+            <input required  type="text" id="valor_produ" placeholder="Valor del Producto" /> <br>
+            <input class="btn btn-primary" type="button" value="Cargar datos del Formulario en la tabla" id="crear_tabla_input" /> <br>  
+            <input class="btn btn-primary" type="button" value="Crea 3 items de 1 click, con los datos del formulario" id="crear3input" /> <br>
+            <input id="filtro" type="text" placeholder="filtro">
+        </form>
+        <div id="enviado"></div>  
+    </div>
+    <div class="DivTabla">
+        <table id="Tabla">
+
+        </table>  
+        <div>
+            <form class="formulario_editar">
+                <input required   type="text" id="editar_nombre_produ"  placeholder="Nombre Del Producto" />                      
+                <input required  type="text" id="editar_modelo_produ" placeholder="Modelo del Producto" />               
+                <input required  type="text" id="editar_valor_produ" placeholder="Valor del Producto" /> <br> 
+                <input class="btn btn-primary" type="button" value="Editar" id="boton_editar_enviar" /> 
+            </form>
+        </div>      
+    </div>
+    <div class="DivFormulario">                
+        <h2>Proceder con la Compra</h2>                
+        <form class="Formulario">                       
+            <input required  type="text"   placeholder="Modelo Del Producto"/> <br>                      
+            <input required  type="number" placeholder="Cantidad de Productos" min="1" max="10"/> <br>               
+            <input required  type="text"   placeholder="Valor del Producto"/> <br>                        
+            <input required  type="text"   placeholder="Numero de Tarjeta"/> <br>                        
+            <input required  type="text"   placeholder="Titual de la Tarjeta"/> <br>                        
+            <input required  type="text"   placeholder="Fecha de vencimiento"/> <br>                        
+            <input required  type="text"   placeholder="Codigo de Seguridad"/> <br>                                        
+            <h2 type="text" id="Captcha"></h2>                        
+            <input required type="text" id="TextoCaptcha"/>
+            <input class="btn btn-primary" id="validar" type="button" value="comprobar"/>    <br>                                                                                   
+            <input class="btn btn-primary" type="submit" value="enviar"/>                    
+        </form>                       
+    </div>
+
+<footer>
+    <div class="Parrafo">           
+        <h3 class="Titulo3">Contactanos</h3>
+        <ul class="lista_footer"> <a id="Contacto"></a>
+            <li>Mail de contacto es:<a href="Dip-uebConnect@gmail.com">  Dip-uebConnect@gmail.com</a></li>
+            <li>Numero de contacto: 024915-4431961</li>
+            <li>Direccion del Local: Av.España 542</li>
+            <li>Trabajamos con Factura A y B.</li>
+            <li>Todas las tarjetas y bitcoin's, 18 cuotas sin interes</li>      
+            <li>Buscanos en nuestras redes: </li>           
+        </ul>
+    </div>
+    <div class="footer">
+        <div class="redes_sociales">
+            <a href="#"><img class="img-fluid" src="img/facebook.png" alt="Facebook" width="35px" height="35px"></a>
+        </div>
+        <div class="redes_sociales">
+            <a href="#"><img class="img-fluid" src="img/instagram.png" alt="Twitter" width="35px" height="35px"></a>
+        </div>
+        <div class="redes_sociales">
+            <a href="#"><img class="img-fluid" src="img/twitter.png" alt="Instagram" width="35px" height="35px"></a>
+        </div>
+        <div class="redes_sociales">
+            <a href="#"><img class="img-fluid" src="img/youtube.png" alt="Instagram" width="35px" height="35px"></a>
+        </div>
+        <div class="redes_sociales">
+            <a href="#"><img class="img-fluid" src="img/whatsapp.png" alt="Instagram" width="35px" height="35px"></a>
+        </div>
+    </div>
+</footer>
+</div>
+    <script  type="text/javascript" src="js/tabla.js"></script>
+    <script type="text/javascript" src="js/captcha.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> 
+</body>
+</html>
